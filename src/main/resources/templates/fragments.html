@@ -27,26 +27,23 @@
         </div>
     </div>
 
-<div th:fragment="jobs-table">
-    <table class="job-listing">
-        <tbody>
-        <tr th:each="job : ${jobs}">
-            <th>ID: </th>
-            <td class="list" th:text="${job.id}"></td>
-            <th>Name: </th>
-            <td class="list" th:text="${job.name}"></td>
-            <th>Employer: </th>
-            <td class="list" th:text="${job.employer}"></td>
-            <th>Location: </th>
-            <td class="list" th:text="${job.location}"></td>
-            <th>Position Type: </th>
-            <td class="list" th:text="${job.positionType}"></td>
-            <th>Skills: </th>
-            <td class="list" th:text="${job.coreCompetency}"></td>
-        </tr>
-        </tbody>
-    </table>
-</div>
+    <div th:fragment="jobs-table">
+        <table class="job-listing">
+            <tbody>
+            <tr th:each="job : ${jobs}">
+                <td>
+                <p class="list" th:text="'ID: ' + ${job.id}"></p>
+                <p class="list" th:text="'Name: ' + ${job.name}"></p>
+                <p class="list" th:text="'Employer: ' + ${job.employer}"></p>
+                <p class="list" th:text="'Location: ' + ${job.location}"></p>
+                <p class="list" th:text="'Position Type: ' + ${job.positionType}"></p>
+                <p class="list" th:text="'Skill: ' + ${job.coreCompetency}"></p>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
 
 </body>
 </html>
+
